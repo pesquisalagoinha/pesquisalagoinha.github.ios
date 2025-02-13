@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../codigoslagoinha/b9998715-c020-44fe-b463-79dcab526c0f.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <title>Pesquisa Lagoinha</title>
+  <style>
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    .content {
+  opacity: 0; 
+  transition: opacity 1.5s ease-in-out;
+}
+
+body.loaded .content {
+  opacity: 1; 
+}
+
+header {
+      height: 78px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px 20px;
+      box-sizing: border-box;
+      color: #fff;
+      background-color: transparent; 
+      transition: background-color 1s ease;
+      z-index: 1000;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header.scrolled {
+      background-color: rgba(26, 130, 248, 0.925);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+        }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      transition: transform 0.3s ease;
+    }
+
+    header.scrolled h1 {
+  transform: scale(1.1);
+}
+       
+
+.menu.open {
+  display: block;
+  transform: translateY(10px); 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+}
+
+    .hero {
+      height: 100vh; 
+      background: url('../codigoslagoinha/Lagoinha-Igreja-Matriz-Nossa-Senhora-da-Conceição-03.jpg') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+      text-shadow: 0px 0px 0px rgba(223, 223, 243, 0.979);
+      font-family: 'Lucida Sans', 'Lucida Sans Regular',
+       'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana,
+        sans-serif;
+        height: 400px;
+        color: rgb(33, 134, 250);
+    }                                        
+
+        .texto:hover {
+      transform: scale(1.2);
+    }
+
+    .text01:hover {
+        transform: scale(1.1);
+    }
+
+  i {
+    transition: transform 0.7s ease;
+    font-size: 3em;
+  }
+
+  i:hover {
+    transform: scale(1.3);   
+    cursor: pointer;
+  }
+           
+  .menu{
+   display: none;
+   background-color: antiquewhite;
+   border-radius: 15px;
+   position: absolute;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  .menu a {
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 
+    'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 5px;
+    font-size: 1.2em;
+    margin: 5px;
+    color: rgb(68, 94, 241);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+  
+
+  a:hover {
+    background-color:  rgb(245, 206, 155);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); 
+  }
+
+  div.paralax {
+  background-image: url('../codigoslagoinha/368746006_770431608422530_2731281633949194068_n.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 215px; 
+  }
+
+    audio {
+      margin: 0 auto;
+      display: block;
+      transition: transform 0.7s ease;
+    }
+
+    audio:hover {
+      transform: scale(1.12);       
+  }
+
+    video:hover {
+    transform: scale(1.05);
+  }
+
+  video {
+    transition: transform 0.7s ease;
+  }
+
+
+  #pesquisalagoinha:hover {
+    transform: scale(1.17);
+  }
+
+  #pesquisalagoinha {
+    transition: transform 0.7s ease;
+  }
+
+
+    .social-icons {
+      display: flex;
+      gap: 20px; 
+      margin: 0 auto;
+      justify-content: center; 
+    }
+
+    .social-icons a {
+      display: block;
+      width: 40px;
+      height: 40px; 
+      overflow: hidden;
+    }
+
+    .social-icons img {
+      width: 100%; 
+      height: 100%;
+      object-fit: cover; 
+    }
+
+    .social-icons a:hover {
+      opacity: 0.8;
+    }
+
+
+
+  @media screen and (max-width: 400px){
+
+    #pesquisalagoinha {
+       width: 230px;
+       height: 230px;
+    }
+
+    .text01 {
+      font-size: 1.8em !important;
+    }
+
+    p {
+      padding-left: 4px !important;
+      padding-right: 4px !important;
+    }
+
+    video {
+      width: 94vw;
+    }
+
+  }
+
+  @media screen and (min-width: 600px) {
+    .tudinho {
+      background-color: rgb(241, 237, 237);
+      box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.3);
+      width: 86vw;
+      border-radius: 30px;
+      margin: 0 auto;
+      display: block;
+    }
+  }
+
+   
+
+
+  </style>
+</head>
+<body>
+  
+  
+<div class="content">
+  <header id="header" style="display: inline-block;">
+    <br>
+    <h1 class="text01" style="transition: transform 0.7s ease;
+     font-size: 2em; display: inline-block;">Pesquisa Lagoinha</h1>
+     <br><br>
+     <i class="material-icons" id="burguermenu" style="display: 
+     inline-block; font-size: 3em; color: rgb(46, 162, 240);"
+     onclick="toggleMenu()"> menu </i>
+
+
+     <div class="menu" id="menu">
+      <br>
+      <a href="lagoinha01.html">§ Página Inicial</a>
+      <br><br>
+      <a href="lagoinha02.html">§ Lagoinha: a história</a>
+      <br><br>
+      <a href="lagoinha03.html">§ Conte a sua história</a>
+      <br><br>
+      <a href="lagoinha04.html">§ Fundadores</a>
+       <br><br>
+       <a href="lagoinha05.html">§ Patrocinadores</a>
+       <br><br>
+     </div>
+  </header>
+    
+
+<div class="content">
+    
+    <section class="hero">
+      <h2 class="texto" style="font-size: 1.8em; font-family: 
+      'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        text-decoration: underline; display: inline-block;       
+         transition: transform 0.7s ease; text-align: center;">    
+         <div style="color: rgb(10, 162, 250);
+          -webkit-text-stroke: 2px rgb(10, 10, 10);"> 
+           Seja bem-vindo ao </div>   
+        <div style="font-size: 2em; color:
+         rgb(46, 162, 240); -webkit-text-stroke: 2px rgb(10, 10, 10); ">Pesquisa Lagoinha</div> 
+    </h2>
+    </section>
+    <br>
+
+
+
+
+    <div class="tudinho">
+
+    <h2 style="text-align: center; color:
+     rgba(26, 130, 248, 0.925); font-family: 'Trebuchet MS', 
+    'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
+     sans-serif; font-size: 2.2em; padding: 10px;">Quem Somos?</h2>
+   
+   <p  style="font-family: 'Trebuchet MS',
+     'Lucida Sans Unicode', 'Lucida Grande',
+      'Lucida Sans', Arial, sans-serif; text-align: center; 
+      color: rgba(26, 130, 248, 0.925); padding: 0px 0px 0px 10px;
+       font-size: 1.2em;">
+      A Fundação Pesquisa Lagoinha é um projeto criado para a preservação e manutenção
+      cultural da cidade de Lagoinha - SP, que visa 
+      promover e resgatar a origem histórica da 
+      cidade e a identidade dos cidadãos Lagoinhenses.</p>
+        <br><br>
+          
+      <div class="paralax"></div>
+
+        <br><br>
+
+      <h2 style="text-align: center; color:
+      rgba(26, 130, 248, 0.925); font-family: 'Trebuchet MS', 
+     'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
+      sans-serif; font-size: 2.2em; padding: 10px;">Como a ideia surgiu?</h2>
+
+      <p  style="font-family: 'Trebuchet MS',
+      'Lucida Sans Unicode', 'Lucida Grande',
+       'Lucida Sans', Arial, sans-serif; text-align: center; 
+       color: rgba(26, 130, 248, 0.925); padding:
+        0px 0px 0px 10px; font-size: 1.2em;"> 
+      A ideia inicial de fazer um museu virtual da cidade surgiu em um bate papo 
+      informal entre o pequeno grupo de amigos Altair Viana, João Cezar e André Gouvea, 
+      em meados de 2021,
+       com intuito de resgatar a memória da 
+       solene cidade 
+       de Lagoinha-SP, que carece de reconhecimento em seu importantíssimo 
+       papel histórico para a região do Vale do Paraíba.
+       
+      
+      <br><br><br>
+ 
+      <video width="400" height="300" controls style="border-radius: 20px; 
+      box-shadow: 10px 8px 15px rgba(0, 0, 0, 0.4);">
+        <source src="../codigoslagoinha/60f23aa8-8682-4498-a00b-e6652bd60c33.mp4" type="">
+        Seu navegador não suporta o arquivo de vídeo. [ERROR 444]
+    </video>
+       <br><br><br>
+
+       <audio controls style="background-color: rgb(46, 162, 240);
+        border-radius: 15px; box-shadow: 10px 8px 15px rgba(0, 0, 0, 0.3);">
+        <source src="../codigoslagoinha/WhatsApp Audio 2025-01-07 at 11.47.57.mp4" type="audio/mp3">
+        Seu navegador não suporta esse áudio. [ERROR 215]
+      </audio>
+       
+      <br><br>
+
+      Com esse objetivo comum, decidimos aprofundar 
+      os estudos a fim de compartilhar com todos a nossa história, 
+      desde o povoamento da cidade até a nomeação e emancipação do município,
+       retratando os fatos
+       políticos, religiosos e históricos de nossas terras que foram decisivos
+        para formação da identidade lagoinhense.  
+        <br><br>
+        Com um objetivo sólido, partimos em busca de documentos, fotos e histórias
+       em todo o Vale que contribuissem para a revelação da contrução e manutenção
+       de Lagoinha - uma cidade muito carente de tais recursos -,
+        de sua formação (1866) a sua independência (1953). 
+
+      </p>
+
+
+     <img id="pesquisalagoinha" src="../codigoslagoinha/b9998715-c020-44fe-b463-79dcab526c0f.jpg" 
+     alt="Logotipo" style="border-radius: 50%; height: 300px; width: 300px;
+     margin: 0 auto; display: block; border: 4px solid rgb(10, 162, 250);
+     box-shadow: 9px 9px 9px 9px rgba(0, 0, 0, 0.5);">
+ <br>    
+     <div style="background-color: rgb(33, 134, 250); width: 70vw; 
+     border-radius: 12px 12px 0px 0px; margin: 0 auto; display: block;">
+    <p style="font-family: Cambria, Cochin, Georgia, Times,
+     'Times New Roman', serif; text-align: center; font-size: 1.5em;
+      color: #fffefd;">FUNDAÇÃO PESQUISA LAGOINHA </p>
+      
+     <p style="font-family: Cambria, Cochin, Georgia, Times,
+     'Times New Roman', serif; text-align: center; font-size: 1.3em;
+      color: #fcfbfb;"> &copy; Copyright 2025 - Todos os direitos reservados. O uso 
+      do conteúdo do site é livre se citada a fonte e a autoria.
+    </p>
+     </div>
+      
+</div>
+  <script>
+    
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled'); 
+          } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    window.addEventListener("load", () => {
+  document.body.classList.add("loaded");
+});
+
+function toggleMenu() {
+            const menu = document.getElementById('menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        }
+
+        window.addEventListener('scroll', () => {
+  const header = document.getElementById('header');
+  if (window.scrollY > 50) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled'); 
+    }
+});
+
+  </script>
+</body>
+</html>

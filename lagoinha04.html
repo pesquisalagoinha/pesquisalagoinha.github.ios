@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../codigoslagoinha/b9998715-c020-44fe-b463-79dcab526c0f.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <title>Pesquisa Lagoinha</title>
+  <style>
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background-color: rgb(230, 227, 227);
+    }
+
+    .content {
+  opacity: 0; 
+  transition: opacity 1.5s ease-in-out; 
+}
+
+body.loaded .content {
+  opacity: 1; 
+}
+
+header {
+      height: 78px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px 20px;
+      box-sizing: border-box;
+      color: #fff;
+      background-color: transparent; 
+      transition: background-color 1s ease;
+      z-index: 1000;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header.scrolled {
+      background-color: rgba(26, 130, 248, 0.925);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+        }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      transition: transform 0.3s ease;
+    }
+
+    header.scrolled h1 {
+  transform: scale(1.1);
+}
+
+
+.menu.open {
+  display: block;
+  transform: translateY(10px); 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+}
+
+    .text01:hover {
+        transform: scale(1.1);
+    }
+
+  i {
+    transition: transform 0.7s ease;
+    font-size: 3em;
+  }
+
+  i:hover {
+    transform: scale(1.3);
+    cursor: pointer;
+  }
+
+  .menu{
+   display: none;
+   background-color: antiquewhite;
+   border-radius: 15px;
+   position: absolute;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  .menu a {
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 
+    'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 5px;
+    font-size: 1.2em;
+    margin: 5px;
+    color: rgb(68, 94, 241);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+  
+
+  a:hover {
+    background-color: rgb(245, 206, 155);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); 
+  }
+
+  img {
+    transition: 0.7s ease;
+  }
+
+  img:hover {
+    transform: scale(1.2);
+  }
+
+  .los4masgrandes {
+    width: 78vw;
+    border-radius: 11px;
+    margin: 0 auto;
+    display: block;
+    background-color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+  }
+ 
+  .los4masgrandes01 {
+    width: 62vw;
+    border-radius: 11px;
+    margin: 0 auto;
+    display: block;
+    background-color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+  }
+
+  .los4masgrandes02 {
+    width: 62vw;
+    border-radius: 11px;
+    margin: 0 auto;
+    display: block;
+    background-color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+  }
+
+  .los4masgrandes03 {
+    width: 62vw;
+    border-radius: 11px;
+    margin: 0 auto;
+    display: block;
+    background-color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+  }
+ 
+  .los4masgrandes04 {
+    width: 62vw;
+    border-radius: 11px;
+    margin: 0 auto;
+    display: block;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+    background-color: white;
+  }
+
+  img {
+    box-shadow: 0 8px 20px black;
+  }
+
+
+  @media screen and (max-width: 400px) { 
+
+.text01 {
+  font-size: 1.8em !important;
+}            
+
+p {
+  padding-left: 4px !important;
+  padding-right: 4px !important;
+}
+
+video {
+  width: 94vw;
+}
+
+}
+
+  </style>
+</head>
+<body>
+  
+<div class="content">
+  <header id="header" style="display: inline-block;">
+    <br>
+    <h1 class="text01" style="transition: transform 0.7s ease;
+     font-size: 2em; display: inline-block;">Pesquisa Lagoinha</h1>
+     <br><br>
+     <i class="material-icons" id="burguermenu" style="display: 
+     inline-block; font-size: 3em; color: rgb(46, 162, 240);"
+     onclick="toggleMenu()"> menu </i>
+
+
+     <div class="menu" id="menu">
+      <br>
+      <a href="lagoinha01.html">§ Página Inicial</a>
+      <br><br>
+      <a href="lagoinha02.html">§ Lagoinha: a história</a>
+      <br><br>
+      <a href="lagoinha03.html">§ Conte a sua história</a>
+      <br><br>
+      <a href="lagoinha04.html">§ Fundadores</a>
+       <br><br>
+       <a href="lagoinha05.html">§ Patrocinadores</a>
+       <br><br>
+  </div>
+
+  </header>
+     
+  <br><br><br><br>
+
+<div class="content">
+<div class="los4masgrandes">
+  <h2 style="color:
+  rgba(26, 130, 248, 0.925); font-family: 'Trebuchet MS', 
+ 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
+  sans-serif; font-size: 2.4em; padding: 10px; text-align:
+   center;">Os Fundadores</h2>
+
+
+<p  style="text-align: center; font-family: 'Trebuchet MS',
+'Lucida Sans Unicode', 'Lucida Grande',
+ 'Lucida Sans', Arial, sans-serif; text-align: center; align-items: center;
+ color: rgba(26, 130, 248, 0.925); 
+ padding: 0px 0px 0px 10px; font-size: 1.2em;">
+  Esta página é dedicada a todos os coloboradores e
+   idealizadores da Fundação Pesquisa Lagoinha, 
+   que tornaram a manutenção
+   e a revelação da identidade histórica de Lagoinha possível.
+ </p>
+ <br>
+ </div>
+
+
+    <br><br><br>
+
+    <div class="los4masgrandes01">
+   <img  style="height: 300px; width: 200px; display: block; margin: 0 auto; border-radius: 10px;"
+    src="../codigoslagoinha/4f5eea54-6440-40fc-98de-828ac716c735.jpg"
+     alt="Fundador João Paulo Rodrigues Cezar">
+
+    <br>
+     <p style="text-align: center; font-family: 'Times New Roman', Times, serif;
+     font-size: 1.25em;">Fundador, pesquisador e historiador <br> João Cezar</p>
+    <br>
+    </div>
+  <br><br>
+
+    <div class="los4masgrandes02">
+   <img  style="height: 270px; width: 200px; display: block; margin: 0 auto; border-radius: 10px;" 
+   src="../codigoslagoinha/13740493-6404-4908-9122-923a1f0ecc38.jpg" 
+   alt="Fundador André Gouvea">
+    
+   <br>
+   <p style="text-align: center; font-family: 'Times New Roman', Times, serif;
+     font-size: 1.25em;"> Fundador, pesquisador e colaborador<br> André Gouvea</p>
+   <br>
+  </div>
+ <br><br>
+
+  <div class="los4masgrandes03">
+   <img  style="height: 300px; width: 200px; display: block; margin: 0 auto; border-radius: 10px;" 
+   src="../codigoslagoinha/dfd487d0-b903-435b-afcb-430a091c2ab3.jpg"
+    alt="Fundador Altair Viana da Silva">
+
+   <br>
+   <p style="text-align: center; font-family: 'Times New Roman', Times, serif;
+     font-size: 1.25em; border-radius: 10px;">
+   Fundador, pesquisador e historiador <br> Altair Viana da Silva
+   </p>
+   <br>
+</div>
+<br>
+   <div class="los4masgrandes04">
+   <img  style="height: 300px; width: 200px; display: block; margin: 0 auto; border-radius: 10px;"  
+   src="../codigoslagoinha/5bafe067-68f3-4e44-b98c-51ed2a818379.jpg" 
+   alt="Colaborador João Pedro Saes Cezar">
+    <br>
+    <p style="text-align: center; font-family: 'Times New Roman', Times, serif;
+    font-size: 1.25em;">Pesquisador, programador e redator  <br> João Pedro Saes Cezar</p>
+    <br>
+</div>
+    <br><br><br>
+</div>
+
+  <script>
+    
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled'); 
+          } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    window.addEventListener("load", () => {
+  document.body.classList.add("loaded");
+});
+
+function toggleMenu() {
+            const menu = document.getElementById('menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        }
+
+
+        window.addEventListener('scroll', () => {
+  const header = document.getElementById('header');
+  if (window.scrollY > 50) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled'); 
+    }
+});
+  </script>
+</body>
+</html>
